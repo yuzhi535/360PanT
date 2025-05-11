@@ -266,3 +266,4 @@ if __name__ == '__main__':
     print(config)
     pnp = PNP(config, opt.method)
     pnp.run_pnp()
+

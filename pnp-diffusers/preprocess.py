@@ -61,6 +61,7 @@ class Preprocess(nn.Module):
         self.unet = UNet2DConditionModel.from_pretrained(model_key, subfolder="unet", revision="fp16",
                                                          torch_dtype=torch.float16).to(self.device)
         self.scheduler = DDIMScheduler.from_pretrained(model_key, subfolder="scheduler")
+        self.scheduler.set_timesteps(50)  # 将默认的timesteps数量设置为50
         print(f'[INFO] loaded stable diffusion!')
 
         self.inversion_func = self.ddim_inversion
@@ -252,8 +253,8 @@ if __name__ == "__main__":
     parser.add_argument('--sd_version', type=str, default='2.1', choices=['1.5', '2.0', '2.1'],
                         help="stable diffusion version")
     parser.add_argument('--seed', type=int, default=1)
-    parser.add_argument('--steps', type=int, default=999)
-    parser.add_argument('--save-steps', type=int, default=1000)
+    parser.add_argument('--steps', type=int, default=50)
+    parser.add_argument('--save-steps', type=int, default=50)
     parser.add_argument('--inversion_prompt', type=str, default='')
     parser.add_argument('--extract-reverse', default=False, action='store_true', help="extract features during the denoising process")
     opt = parser.parse_args()

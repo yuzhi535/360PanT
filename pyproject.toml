@@ -1,0 +1,26 @@
+[project]
+name = "360PanT"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "", email = ""},
+]
+dependencies = [
+    "torch==2.0.1",
+"torchvision==0.15.2",
+"numpy==1.25.0",
+"diffusers==0.17.1",
+"xformers==0.0.20",
+"transformers==4.30.2",
+"accelerate==0.20.3",
+"gradio>=5.29.0",
+"pillow>=9.0.0",
+"pyyaml>=6.0.0"
+]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false

@@ -1,12 +1,12 @@
 device: cuda
 guidance_scale: 7.5
-image_path: /content/360PanT/pnp-diffusers/data/neon_photostudio.jpg
+image_path: data/temp_input.png
 latents_path: latents_forward
-n_timesteps: 50
+n_timesteps: 25
 negative_prompt: ugly, blurry, black, low res, unrealistic
-output_path: 360PanT-results/neon_photostudio
+output_path: 360PanT-results/temp_input
 pnp_attn_t: 0.5
 pnp_f_t: 0.8
-prompt: origami of a photo of neon photostudio
+prompt: A photo of clear sky  and lawn
 sd_version: '2.1'
 seed: 1

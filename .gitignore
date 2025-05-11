@@ -4,3 +4,9 @@ freecontrol/libs/model/__pycache__/
 freecontrol/libs/model/module/__pycache__/
 freecontrol/libs/utils/__pycache__/
 freecontrol/libs/__pycache__/
+pnp-diffusers/360PanT-results
+pnp-diffusers/data
+*.pt
+data/
+*.ipynb
+.venv/
